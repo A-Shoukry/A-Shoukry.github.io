@@ -89,6 +89,8 @@ section {
     border-radius: 15px;
     margin-bottom: 40px;
     transition: 0.7s ease;
+    text-align: center;
+    min-width: max-content;
 }
 
 .main-btn:hover {
