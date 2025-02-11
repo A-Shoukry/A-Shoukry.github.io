@@ -252,6 +252,17 @@ section {
     padding: 0 12px 0 0;
 }
 
+.footer-achievement {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.footer-achievement span {
+    font-weight: bold;
+    color: #4CAF50; /* or your theme color */
+}
+
 @media (max-width:1023px){
     header{
         padding: 12px 20px;
