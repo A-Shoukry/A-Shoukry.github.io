@@ -289,6 +289,13 @@ section {
         font-size: 12px;
     }
 
+    .main {
+        background: url(/images/background_main_mobile.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
     .main-content h2{
         font-size: 0.8em;
     }
