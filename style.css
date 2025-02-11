@@ -284,7 +284,7 @@ section {
 
 }
 
-@media (max-width:641px){
+@media (max-width:800px){
     body{
         font-size: 12px;
     }
