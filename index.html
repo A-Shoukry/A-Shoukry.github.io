@@ -1,366 +1,587 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/images/favicon.ico">
-    <title>Ahmed Shoukry</title>
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-</section>
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-    <header>
-        <a href="#main" class="logo">Ahmed</a>
-        <nav class="navigation">
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#Platforms">Platforms</a>
-        </nav>
-    </header>
+:root {
+    --navy: #213555;
+    --blue: #4F709C;
+    --beige: #D8C4B6;
+    --cream: #F5EFE7;
+    --dark: #00001e;
+    --white: #ffffff;
+}
 
+header {
+    background-color: var(--beige);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 200px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
 
-     <section class="main" id="main">
-        <div>
-            <h2>Hello, I'm Ahmed<br></h2>
-            <h2><span>Programmatic</h2>
-            <h2>Performance Marketing Manager<br><span></span></h2>
-                <h2>8+ Years Exp. Managed $15M+ in ad spend with ROAS 10X<br><span></span></h2>
-            <div class="main-buttons">
-                <a href="#clients" class="main-btn">Clients</a>
-                <a href="#contact" class="main-btn">Work Togther</a>
-                <a href="#Platforms" class="main-btn">Platforms</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://wa.me/201111058060" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:Ahmedsayedshoukry@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/ahmed-shoukryy/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <!-- <a href="https://codeforces.com/profile/OmarRoka29" target="_blank"><iconify-icon icon="simple-icons:codeforces" style="color: #f5efe7;" width="30" height="30"></iconify-icon></a> -->
-            </div>
-        </div>
-    </section>
+.logo {
+    text-decoration: none;
+    color: var(--navy);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
 
-     <section class="projects" id="clients">
-        <h2 class="title">Clients</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/selah-eltelmeez-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Leading educational books publisher</p>
-                    <strong class="project-title">
-                        <span>Selah El-Telmeez</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/gisc-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">GEMS International School Cairo</p>
-                    <strong class="project-title">
-                        <span>GISC</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/mantrac-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Leading heavy equipment supplier</p>
-                    <strong class="project-title">
-                        <span>Mantrac</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/bism-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">GEMS British International School Madinaty</p>
-                    <strong class="project-title">
-                        <span>BISM</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/uh-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">University of Hertfordshire in Egypt - GAF</p>
-                    <strong class="project-title">
-                        <span>UH-GAF</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/savvy-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Games and Esports Company</p>
-                    <strong class="project-title">
-                        <span>SAVVY Games Group</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/bisbh-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Britus International School - Bahrain</p>
-                    <strong class="project-title">
-                        <span>BISBH</span>
-                        <!-- <a href="https://github.com/o-wael/fifa-system" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/hayah-west-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Excellence in international education</p>
-                    <strong class="project-title">
-                        <span>Hayah West</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/passport-shipping-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Reliable global delivery</p>
-                    <strong class="project-title">
-                        <span>Passport Shipping</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/ecis-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Education Castle International School</p>
-                    <strong class="project-title">
-                        <span>ECIS</span>
-                        <!-- <a href="https://github.com/software-engineering-2023/Uncle-Bob-s-Descendants-" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/tbs-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">GEMS The British School Al Rehab</p>
-                    <strong class="project-title">
-                        <span>TBS</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/egis-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Education Gate International School - Al Rawdah</p>
-                    <strong class="project-title">
-                        <span>EGIS</span>
-                        <!-- <a href="https://github.com/AhmadHoseiny/DBProject" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/tsps-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">The Sheffield Private School</p>
-                    <strong class="project-title">
-                        <span>TSPS</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/biso-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Britus International School - Al Olaya</p>
-                    <strong class="project-title">
-                        <span>BISO</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/mils-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Madinaty Integrated Language School</p>
-                    <strong class="project-title">
-                        <span>MILS</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/aia-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Alexandria International Academy</p>
-                    <strong class="project-title">
-                        <span>AIA</span>
-                        <!-- <a href="https://github.com/o-wael/marvel-ultimate-war" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/wils-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Westview International Language School</p>
-                    <strong class="project-title">
-                        <span>WILS</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/aast-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Leading maritime academy in Egypt</p>
-                    <strong class="project-title">
-                        <span>AAST</span>
-                        <!-- <a href="https://github.com/advanced-computer-lab-2023/Mern-overflow-Clinic" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/manara-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Quality global education</p>
-                    <strong class="project-title">
-                        <span>Manara International</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/repton-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Premier British education</p>
-                    <strong class="project-title">
-                        <span>Repton School Cairo</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/uptown-logo.png" />
-                </div>
-                <div class="project-info">
-                    <!-- <p class="project-category">Uptown International School</p> -->
-                    <strong class="project-title">
-                        <span>Uptown International School</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/sils-logo.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Scholars International Language School</p>
-                    <strong class="project-title">
-                        <span>SILS</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/edam-logo.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Sustainable agriculture in Egypt</p>
-                    <strong class="project-title">
-                        <span>Edam Farms</span>
-                        <!-- <a href="https://github.com/o-wael/Von-Neumann-with-Fries" class="more-details" target="_blank">More details</a> -->
-                    </strong>
-                </div>
-            </div>
-            
-            
-    </section>
+.navigation a {
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    padding-left: 25px;
+    transition: color 0.3s ease;
+}
 
-    <section class="cards contact" id="contact">
-        <h2 class="title">Let's work together</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-<a href="tel:00201111058060" style="color: inherit; text-decoration: none;">
-    +2 011 1105 8060
-</a>                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-<a href="mailto:Ahmedsayedshoukry@gmail.com" style="color: inherit; text-decoration: none;">
-    Ahmedsayedshoukry@gmail.com
-</a>                </div>
-            </div>            
-        </div>
-    </section>
-    
-    <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Ahmed Shoukry</span></p>
-        <div class="social-icons">
-            <a href="https://wa.me/201111058060" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:Ahmedsayedshoukry@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/ahmed-shoukryy/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </footer>
+.navigation a:hover { color: var(--blue); }
 
-</body>
-</html>
+.header-cta {
+    background-color: var(--navy);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: 0.3s ease;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.header-cta:hover {
+    background-color: var(--blue);
+    transform: scale(1.05);
+}
+
+section { padding: 100px 200px; }
+
+.section-subtitle {
+    text-align: center;
+    color: var(--blue);
+    font-size: 1.05em;
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(/images/background_main.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content { max-width: 700px; }
+
+.hero-tag {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.15);
+    color: var(--cream);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero-title span { color: var(--beige); }
+
+.hero-subtitle {
+    color: var(--cream);
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05em;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 580px;
+}
+
+.hero-desc strong { color: var(--beige); }
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.btn-primary {
+    background-color: var(--navy);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--blue);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cream);
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1em;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: var(--cream);
+}
+
+.social-icons a {
+    color: var(--cream);
+    font-size: 1.7em;
+    padding-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover { color: var(--beige); }
+
+.stats-bar {
+    background-color: var(--navy);
+    padding: 40px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.stat-number {
+    color: var(--beige);
+    font-size: 2.8em;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85em;
+    margin-top: 6px;
+    text-align: center;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.services { background-color: var(--cream); }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 35px 30px;
+    transition: 0.4s ease;
+    border: 1px solid rgba(33,53,85,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(33,53,85,0.15);
+    border-color: var(--blue);
+}
+
+.service-icon {
+    font-size: 2.5em;
+    color: var(--navy);
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 0.92em;
+    line-height: 1.7;
+}
+
+.projects { background-color: var(--white); }
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--navy);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.projects .content { margin-top: 30px; }
+
+.project-card {
+    background-color: var(--cream);
+    border: 1px solid var(--cream);
+    min-height: 14em;
+    width: 22em;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 15px;
+    transition: 0.4s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(33,53,85,0.15);
+}
+
+.project-image img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    padding: 15px;
+    background: #fff;
+}
+
+.project-info { padding: 1em; }
+
+.project-category {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--navy);
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+.results { background-color: var(--navy); }
+.results .title { color: var(--cream); }
+.results .section-subtitle { color: rgba(255,255,255,0.6); }
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.result-card {
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 35px 30px;
+    transition: 0.4s ease;
+}
+
+.result-card:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-6px);
+    border-color: var(--beige);
+}
+
+.result-tag {
+    display: inline-block;
+    background-color: var(--beige);
+    color: var(--navy);
+    font-size: 0.78em;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.result-card h3 {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.result-card > p {
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.result-metrics {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.metric { display: flex; flex-direction: column; }
+
+.metric-num {
+    color: var(--beige);
+    font-size: 1.8em;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.metric-label {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.75em;
+    margin-top: 4px;
+}
+
+.testimonials { background-color: var(--cream); }
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 35px 30px;
+    transition: 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid rgba(33,53,85,0.06);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(33,53,85,0.12);
+}
+
+.quote-icon {
+    font-size: 3em;
+    color: var(--beige);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    color: #444;
+    font-size: 0.95em;
+    line-height: 1.75;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: var(--navy);
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.testimonial-author span {
+    color: var(--blue);
+    font-size: 0.85em;
+}
+
+.platforms { background-color: var(--white); }
+
+.platforms-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.platform-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--cream);
+    border-radius: 16px;
+    padding: 30px 35px;
+    min-width: 130px;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    border: 1px solid transparent;
+}
+
+.platform-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(33,53,85,0.12);
+    border-color: var(--blue);
+}
+
+.platform-icon { font-size: 2.8em; }
+
+.platform-item span {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+}
+
+.card {
+    background-color: var(--beige);
+    width: 22em;
+    border-radius: 16px;
+    padding: 30px 25px;
+    margin: 15px;
+    transition: 0.4s ease;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card .icon {
+    color: var(--navy);
+    font-size: 5em;
+    text-align: center;
+}
+
+.info { text-align: center; }
+
+.info h3 {
+    color: var(--navy);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.cards .title { color: var(--cream); }
+
+.contact {
+    background-color: var(--blue);
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.footer {
+    background-color: var(--dark);
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.footer-title span { color: var(--beige); }
+
+.footer .social-icons a {
+    color: rgba(255,255,255,0.7);
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover { color: var(--beige); }
+
+@media (max-width: 1200px) {
+    header { padding: 12px 40px; }
+    section { padding: 80px 40px; }
+    .stats-bar { padding: 40px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .results-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1023px) {
+    header { padding: 12px 20px; }
+    .navigation a { padding-left: 10px; font-size: 0.9em; }
+    .header-cta { display: none; }
+    section { padding: 70px 20px; }
+    .stats-bar { padding: 30px 20px; gap: 20px; }
+    .stat-item { padding: 0 25px; }
+    .stat-divider { display: none; }
+    .content { flex-direction: column; align-items: center; }
+    .hero-title { font-size: 2.2em; }
+}
+
+@media (max-width: 800px) {
+    body { font-size: 12px; }
+    .main {
+        background: url(/images/background_main_mobile.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .services-grid { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .stat-number { font-size: 2em; }
+    .navigation { display: none; }
+}
+
+@media (max-width: 300px) {
+    body { font-size: 10px; }
+}
