@@ -610,15 +610,59 @@ section {
 @media (max-width: 1023px) {
     header {
         padding: 15px 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px; 
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 1.4em; 
+    }
+    
+    .navigation {
+        flex-direction: row; 
+        align-items: center;
+        width: auto;
+        gap: 12px; 
     }
     
     .navigation a {
-        padding-left: 10px;
+        padding-left: 0;
+        font-size: 0.85em; 
     }
     
+    .dropdown {
+        width: auto;
+    }
+    
+    .dropdown .dropbtn {
+        padding-left: 0;
+        margin: 0;
+        width: auto;
+        font-size: 0.85em;
+        justify-content: center;
+    }
+    
+    .dropdown-content {
+        position: absolute;
+        left: auto;
+        right: 0; 
+        min-width: 160px;
+        box-shadow: 0 10px 25px rgba(33, 53, 85, 0.15);
+        background-color: #ffffff;
+        margin-top: 15px;
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a {
+        padding: 12px 15px !important;
+        font-size: 0.9em !important;
+    }
+
     .title {
         font-size: 1.8em;
     }
@@ -652,45 +696,6 @@ section {
     
     .tool-card {
         width: 100%; 
-    }
-    
-    .navigation {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-    
-    .dropdown {
-        width: 100%;
-    }
-    
-    .dropdown .dropbtn {
-        padding-left: 10px;
-        margin: 10px 0;
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    /* Static flat menu display configuration for simplified touch controls */
-    .dropdown-content {
-        position: relative;
-        left: 0;
-        box-shadow: none;
-        background-color: rgba(33, 53, 85, 0.03);
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-        display: none; 
-        width: 100%;
-        margin-top: 5px;
-    }
-    
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    
-    .dropdown-content a {
-        padding: 10px 20px !important;
     }
 }
 
