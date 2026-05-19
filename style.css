@@ -212,6 +212,127 @@ section {
     color: #F5EFE7;
 }
 
+/* --- Platforms Section Root Container --- */
+.platforms {
+    background-color: #fafafa; /* Subtle light background shift to isolate the section */
+}
+
+.platform-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px; /* Modern grid gap management instead of broad margins */
+    margin-top: 30px;
+}
+
+/* --- Base Platform Card Layout --- */
+.platform-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    width: 22em;
+    min-height: 15em;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s ease;
+}
+
+/* --- Smart Top Header Block --- */
+.platform-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Standardizing Platform Brand Logos/Icons Container */
+.platform-logo {
+    font-size: 2.5em; /* Perfectly fits brand icons */
+    color: #475569; /* Elegant dark slate default */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.platform-logo img {
+    max-height: 40px;
+    max-width: 120px;
+    object-fit: contain; /* Keeps raw images clean and un-stretched */
+}
+
+/* Category Badge Typography */
+.platform-tag {
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    background-color: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* --- Card Body Elements --- */
+.platform-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.platform-name {
+    color: #213555;
+    font-size: 1.25em;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.platform-desc {
+    font-size: 0.9em;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* --- Premium Platform-Specific Hover Interaction Rules --- */
+.platform-card:hover {
+    transform: translateY(-6px); /* Sophisticated vertical float motion */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+}
+
+.platform-card:hover .platform-logo {
+    transform: scale(1.12); /* Subtle snappy micro-expansion for the logo itself */
+}
+
+/* Facebook Interaction Modifiers */
+.platform-card.fx-facebook:hover {
+    border-color: #1877f2;
+}
+.platform-card.fx-facebook:hover .platform-logo {
+    color: #1877f2;
+}
+
+/* Google Interaction Modifiers */
+.platform-card.fx-google:hover {
+    border-color: #ea4335;
+}
+.platform-card.fx-google:hover .platform-logo {
+    color: #4285f4; /* Dynamically pops to Google blue on frame hover */
+}
+
+/* TikTok Interaction Modifiers */
+.platform-card.fx-tiktok:hover {
+    border-color: #010101;
+}
+.platform-card.fx-tiktok:hover .platform-logo {
+    color: #fe2c55;
+}
+
 .contact {
     background-color: #4F709C;
     padding-top: 15em;
