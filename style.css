@@ -28,6 +28,95 @@ header {
     font-size: 1.8em;
 }
 
+/* ==========================================================================
+   HEADER NAVIGATION DROPDOWN
+   ========================================================================== */
+
+/* Keeps nav link items and dropdown container level on the horizontal axis */
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Inherits your native link aesthetics */
+.dropdown .dropbtn {
+    color: #213555;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Caret motion indicator */
+.dropdown .dropbtn i {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+/* Hidden container positioned directly underneath your button frame */
+.dropdown-content {
+    display: block;
+    position: absolute;
+    min-width: 220px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(33, 53, 85, 0.15);
+    margin-top: 15px;
+    left: 30px; /* Aligns with button text padding start point */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid rgba(33, 53, 85, 0.05);
+}
+
+/* Individual list entries within menu container */
+.dropdown-content a {
+    color: #213555 !important;
+    padding: 14px 20px !important;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95em !important;
+    font-weight: 500;
+    padding-left: 20px !important; /* Resets large standard top level gap spacing */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Menu entry hover changes */
+.dropdown-content a:hover {
+    background-color: #f1f5f9;
+    color: #4F709C !important;
+}
+
+/* Trigger reveal properties on active parent hover */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.dropdown:hover .dropbtn {
+    color: #4F709C;
+}
+
+.dropdown:hover .dropbtn i {
+    transform: rotate(180deg); /* Flip caret upside down on active reveal */
+}
+
 .navigation a{
     color: #213555;
     text-decoration: none;
@@ -491,6 +580,34 @@ section {
    4. MOBILE MEDIA QUERY ADJUSTMENTS
    ========================================================================== */
 @media (max-width: 1023px) {
+    header{
+        padding: 12px 20px;
+    }
+    
+    .navigation a{
+        padding-left: 10px;
+    }
+    
+    .title{
+        font-size: 1.8em;
+    }
+    
+    section{
+        padding: 80px 20px;
+    }
+    
+    .main-content h2{
+        font-size: 1em;
+    }
+    
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
     .skill-grid {
         grid-template-columns: 1fr; /* Stack into 1 column on tablets/mobile */
         gap: 20px;
@@ -502,40 +619,46 @@ section {
     .tool-card {
         width: 100%; /* Fully stretch cards out on smaller viewports */
     }
-}
-
-
-@media (max-width:1023px){
-    header{
-        padding: 12px 20px;
-    }
-
-    .navigation a{
-        padding-left: 10px;
-    }
-
-    .title{
-        font-size: 1.8em;
-    }
-
-    section{
-        padding: 80px 20px;
-    }
-
-    .main-content h2{
-        font-size: 1em;
-    }
-
-    .main-content h3{
-        font-size: 1.6em;
-    }
-
-    .content{
+    .navigation {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        width: 100%;
     }
-
+    
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropdown .dropbtn {
+        padding-left: 10px;
+        margin: 10px 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    /* Static flat menu display configuration for simplified touch controls */
+    .dropdown-content {
+        position: relative;
+        left: 0;
+        box-shadow: none;
+        background-color: rgba(33, 53, 85, 0.03);
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        display: none; /* Controlled cleanly by CSS state classes or default view block expansion */
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a {
+        padding: 10px 20px !important;
+    }
 }
+
 
 @media (max-width:800px){
     body{
@@ -556,6 +679,16 @@ section {
     .main-content h3{
         font-size: 1.4em;
     }
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+  .sub-heading {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width:300px){
@@ -580,14 +713,4 @@ section {
   font-size: 1.2rem; /* باقي الجمل بخط أصغر */
   font-weight: 400;
   line-height: 1.5;
-}
-
-/* الموبايل */
-@media (max-width: 768px) {
-  .main-heading {
-    font-size: 1.8rem;
-  }
-  .sub-heading {
-    font-size: 1rem;
-  }
 }
