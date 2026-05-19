@@ -580,10 +580,12 @@ section {
    4. MOBILE MEDIA QUERY ADJUSTMENTS
    ========================================================================== */
 @media (max-width: 1023px) {
-    header{
-        padding: 12px 20px;
+header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px; /* Adds breathing room between the logo and menu */
     }
-    
     .navigation a{
         padding-left: 10px;
     }
