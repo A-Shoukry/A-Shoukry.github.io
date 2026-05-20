@@ -27,108 +27,22 @@ header {
     font-size: 1.8em;
 }
 
-/* ==========================================================================
-   HEADER NAVIGATION DROPDOWN
-   ========================================================================== */
-
-/* Keeps nav link items and dropdown container level on the horizontal axis */
 .navigation {
     display: flex;
     align-items: center;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Inherits your native link aesthetics */
-.dropdown .dropbtn {
-    color: #213555 !important;
-    text-decoration: none !important;
-    font-size: 1.1em;
-    font-weight: 600;
-    padding-left: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.3s ease;
-}
-
-/* Caret motion indicator */
-.dropdown .dropbtn i {
-    font-size: 0.8em;
-    transition: transform 0.3s ease;
-}
-
-/* Hidden container positioned directly underneath your button frame */
-.dropdown-content {
-    display: block;
-    position: absolute;
-    min-width: 220px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(33, 53, 85, 0.15);
-    margin-top: 15px;
-    left: 30px; 
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid rgba(33, 53, 85, 0.05);
-}
-
-/* Individual list entries within menu container */
-.dropdown-content a {
-    color: #213555 !important;
-    padding: 14px 20px !important;
-    text-decoration: none;
-    display: block;
-    font-size: 0.95em !important;
-    font-weight: 500;
-    padding-left: 20px !important; 
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Menu entry hover changes */
-.dropdown-content a:hover {
-    background-color: #f1f5f9;
-    color: #4F709C !important;
-}
-
-/* Trigger reveal properties on active parent hover */
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-.dropdown:hover .dropbtn {
-    color: #4F709C !important;
-}
-
-.dropdown:hover .dropbtn i {
-    transform: rotate(180deg); /* Flip caret upside down on active reveal */
+    gap: 30px;
 }
 
 .navigation a {
     color: #213555;
     text-decoration: none !important;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
-    padding-left: 30px;
     transition: color 0.3s ease;
 }
 
 .navigation a:hover {
     color: #4F709C !important;
-    text-decoration: none !important;
 }
 
 /* ==========================================================================
@@ -218,7 +132,7 @@ section {
 .card {
     background-color: #D8C4B6;
     width: 25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
@@ -278,7 +192,7 @@ section {
 }
 
 .project-image img {
-    width: 100%
+    width: 100%;
 }
 
 .project-info {
@@ -298,21 +212,8 @@ section {
     margin-top: 10px;
 }
 
-.more-details {
-    text-decoration: none;
-    color: #213555;
-}
-
-.more-details:hover {
-    color: #212121;
-}
-
-.cards .title {
-    color: #F5EFE7;
-}
-
 /* ==========================================================================
-   1. PLATFORMS SECTION (Custom Brand Accents)
+   PLATFORMS SECTION
    ========================================================================== */
 .platforms {
     background-color: #ffffff;
@@ -383,7 +284,6 @@ section {
     line-height: 1.6;
 }
 
-/* Card Interaction Animations */
 .platform-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
@@ -392,36 +292,28 @@ section {
     transform: scale(1.1);
 }
 
-/* Platform Branding Hover Colors */
+/* BRAND ACCENTS */
 .platform-card.fx-dv360:hover { border-color: #4285f4; }
 .platform-card.fx-dv360:hover .platform-logo { color: #4285f4; }
-
 .platform-card.fx-cm360:hover { border-color: #ea4335; }
 .platform-card.fx-cm360:hover .platform-logo { color: #ea4335; }
-
 .platform-card.fx-sa360:hover { border-color: #fbbc05; }
 .platform-card.fx-sa360:hover .platform-logo { color: #fbbc05; }
-
 .platform-card.fx-meta:hover { border-color: #0064e0; }
 .platform-card.fx-meta:hover .platform-logo { color: #0064e0; }
-
 .platform-card.fx-google:hover { border-color: #34a853; }
 .platform-card.fx-google:hover .platform-logo { color: #34a853; }
-
 .platform-card.fx-linkedin:hover { border-color: #0a66c2; }
 .platform-card.fx-linkedin:hover .platform-logo { color: #0a66c2; }
-
 .platform-card.fx-tiktok:hover { border-color: #000000; }
 .platform-card.fx-tiktok:hover .platform-logo { color: #fe2c55; }
-
 .platform-card.fx-snapchat:hover { border-color: #fffc00; }
 .platform-card.fx-snapchat:hover .platform-logo { color: #fffc00; background: #000; padding: 2px; border-radius: 4px;}
-
 .platform-card.fx-x:hover { border-color: #111111; }
 .platform-card.fx-x:hover .platform-logo { color: #000000; }
 
 /* ==========================================================================
-   2. TOOLS SECTION (Tech Dashboard Style)
+   TOOLS SECTION
    ========================================================================== */
 .tools {
     background-color: #213555; 
@@ -468,7 +360,6 @@ section {
     line-height: 1.5;
 }
 
-/* Tool Interactive State */
 .tool-card:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: #D8C4B6;
@@ -477,8 +368,6 @@ section {
 .tool-card:hover .tool-icon {
     transform: rotate(5deg) scale(1.05);
 }
-
-/* Shopify Unique Highlight Accent */
 .tool-card.dynamic-shopify:hover {
     border-color: #96bf48;
 }
@@ -487,7 +376,7 @@ section {
 }
 
 /* ==========================================================================
-   3. SKILLS SECTION (Premium Editorial Minimalist Grid)
+   SKILLS SECTION
    ========================================================================== */
 .skills {
     background-color: #f8fafc;
@@ -560,10 +449,6 @@ section {
     color: #213555;
 }
 
-.contact .info p {
-    font-size: 1.5em;
-}
-
 .footer {
     background-color: #00001e;
     color: #fff;
@@ -586,81 +471,31 @@ section {
     padding: 0 12px 0 0;
 }
 
-/* ===== Intro Section Styling ===== */
-.intro-text {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; 
-}
-
-.main-heading {
-  font-size: 2.5rem; 
-  line-height: 1.3;
-}
-
-.sub-heading {
-  font-size: 1.2rem; 
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 /* ==========================================================================
-   4. MOBILE MEDIA QUERY ADJUSTMENTS
+   MEDIA QUERIES (CLEANED REFACTOR)
    ========================================================================== */
 @media (max-width: 1023px) {
     header {
-        padding: 15px 20px;
+        padding: 15px 30px;
         flex-direction: row; 
         justify-content: space-between;
         align-items: center;
     }
     
     .logo {
-        font-size: 1.4em; 
+        font-size: 1.6em; 
     }
     
+    /* Fixed structural visibility, readability & sizes */
     .navigation {
         flex-direction: row; 
         align-items: center;
-        width: auto;
-        gap: 12px; 
+        gap: 20px; 
     }
     
     .navigation a {
-        padding-left: 0;
-        font-size: 0.85em; 
-    }
-    
-    .dropdown {
-        width: auto;
-    }
-    
-    .dropdown .dropbtn {
-        padding-left: 0;
-        margin: 0;
-        width: auto;
-        font-size: 0.85em;
-        justify-content: center;
-    }
-    
-    .dropdown-content {
-        position: absolute;
-        left: auto;
-        right: 0; 
-        min-width: 160px;
-        box-shadow: 0 10px 25px rgba(33, 53, 85, 0.15);
-        background-color: #ffffff;
-        margin-top: 15px;
-        display: none;
-    }
-    
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-    
-    .dropdown-content a {
-        padding: 12px 15px !important;
-        font-size: 0.9em !important;
+        font-size: 1.1em; /* Significantly bigger & sharper scale for tap targets */
+        font-weight: 700;
     }
 
     .title {
@@ -669,14 +504,6 @@ section {
     
     section {
         padding: 80px 20px;
-    }
-    
-    .main-content h2 {
-        font-size: 1em;
-    }
-    
-    .main-content h3 {
-        font-size: 1.6em;
     }
     
     .content {
@@ -699,9 +526,9 @@ section {
     }
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
     body {
-        font-size: 12px;
+        font-size: 14px; /* Increased fallback base typography */
     }
 
     .main {
@@ -710,36 +537,23 @@ section {
         background-position: center;
         background-attachment: fixed;
     }
-
-    .main-content h2 {
-        font-size: 0.8em;
-    }
-
-    .main-content h3 {
-        font-size: 1.4em;
-    }
 }
 
 @media (max-width: 768px) {
-  .main-heading {
-    font-size: 1.8rem;
-  }
-  .sub-heading {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width:300px) {
-    body {
-        font-size: 10px;
+    /* Responsive header modifications for strict mobile screen ratios */
+    header {
+        padding: 15px 20px;
     }
-    /* ==========================================================================
-   MOBILE FONT SIZE ADJUSTMENT FOR NAVIGATION LINKS & BUTTON
-   ========================================================================== */
-@media (max-width: 1023px) {
-    .navigation a, 
-    .dropdown .dropbtn {
-        font-size: 2em !important; /* Targets both the text links and the dropdown button */
+    .logo {
+        font-size: 1.4em;
     }
-}
+    .navigation {
+        gap: 14px;
+    }
+    .navigation a {
+        font-size: 1.05em;
+    }
+    .main-heading {
+        font-size: 1.8rem;
+    }
 }
