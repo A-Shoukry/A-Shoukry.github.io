@@ -120,7 +120,7 @@ header {
 .navigation a {
     color: #213555;
     text-decoration: none !important;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     padding-left: 30px;
     transition: color 0.3s ease;
@@ -733,4 +733,13 @@ section {
     body {
         font-size: 10px;
     }
+    /* ==========================================================================
+   MOBILE FONT SIZE ADJUSTMENT FOR NAVIGATION LINKS & BUTTON
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .navigation a, 
+    .dropdown .dropbtn {
+        font-size: 1.5em !important; /* Targets both the text links and the dropdown button */
+    }
+}
 }
