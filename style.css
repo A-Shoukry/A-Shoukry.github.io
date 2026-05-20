@@ -120,7 +120,7 @@ header {
 .navigation a {
     color: #213555;
     text-decoration: none !important;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 600;
     padding-left: 30px;
     transition: color 0.3s ease;
