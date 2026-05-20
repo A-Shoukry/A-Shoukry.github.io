@@ -540,20 +540,20 @@ section {
 }
 
 @media (max-width: 768px) {
-    /* Responsive header modifications for strict mobile screen ratios */
     header {
-        padding: 15px 20px;
+        padding: 12px 15px; /* Slightly tighter header spacing */
     }
     .logo {
-        font-size: 1.4em;
+        font-size: 1.25em; /* Made the logo smaller */
     }
     .navigation {
-        gap: 14px;
+        gap: 12px; /* Tighter spacing between menu items */
     }
     .navigation a {
-        font-size: 1.05em;
+        font-size: 0.95em; /* Dropped below 1em for a cleaner, compact look */
+        font-weight: 600;  /* Keeps it clean and readable at a smaller size */
     }
     .main-heading {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
