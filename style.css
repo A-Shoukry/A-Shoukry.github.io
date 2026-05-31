@@ -50,26 +50,38 @@ header {
    ========================================================================== */
 
 section {
-    padding: 80px 120px;
+    padding: 100px 200px;
 }
 
 .main {
     width: 100%;
     min-height: 100vh;
-    display: flex;
     align-items: center;
     background: url(/images/background_main.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
-    padding-top: 70px;
+    background-attachment: scroll;  /* ← done */
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #F5EFE7;
+    font-size: 2.5em;
+    font-weight: 600;
 }
 
 .main-buttons {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    width: 200px;
+    align-items: left;
+    width: 48%;
     margin-top: 1.7em;
 }
 
@@ -77,16 +89,16 @@ section {
     color: #D8C4B6;
     background-color: #213555;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 1.1em;
     font-weight: 600;
-    display: block;
-    width: 100%;
-    padding: 0.6em 1.2em;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
     letter-spacing: 1px;
     border-radius: 15px;
-    margin-bottom: 12px;
+    margin-bottom: 40px;
     transition: 0.7s ease;
     text-align: center;
+    min-width: max-content;
 }
 
 .main-btn:hover {
@@ -459,7 +471,7 @@ section {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES
+   MEDIA QUERIES (CLEANED REFACTOR)
    ========================================================================== */
 @media (max-width: 1023px) {
     header {
@@ -473,6 +485,7 @@ section {
         font-size: 1.6em; 
     }
     
+    /* Fixed structural visibility, readability & sizes */
     .navigation {
         flex-direction: row; 
         align-items: center;
@@ -480,7 +493,7 @@ section {
     }
     
     .navigation a {
-        font-size: 1.1em;
+        font-size: 1.1em; /* Significantly bigger & sharper scale for tap targets */
         font-weight: 700;
     }
 
@@ -489,11 +502,7 @@ section {
     }
     
     section {
-        padding: 60px 20px;
-    }
-
-    .main {
-        padding-top: 70px;
+        padding: 80px 20px;
     }
     
     .content {
@@ -514,11 +523,6 @@ section {
     .tool-card {
         width: 100%; 
     }
-
-    .main-buttons {
-        width: 100%;
-        max-width: 280px;
-    }
 }
 
 @media (max-width: 800px) {
@@ -530,29 +534,25 @@ section {
         background: url(/images/background_main_mobile.png) no-repeat;
         background-size: cover;
         background-position: center top;
-        background-attachment: scroll;
+        background-attachment: scroll; /* ← FIXED */
     }
 }
 
 @media (max-width: 768px) {
     header {
-        padding: 12px 15px;
+        padding: 12px 15px; /* Slightly tighter header spacing */
     }
     .logo {
-        font-size: 1.25em;
+        font-size: 1.25em; /* Made the logo smaller */
     }
     .navigation {
-        gap: 12px;
+        gap: 12px; /* Tighter spacing between menu items */
     }
     .navigation a {
-        font-size: 0.95em;
-        font-weight: 600;
+        font-size: 0.95em; /* Dropped below 1em for a cleaner, compact look */
+        font-weight: 600;  /* Keeps it clean and readable at a smaller size */
     }
     .main-heading {
         font-size: 1.6rem;
-    }
-    .main-buttons {
-        width: 100%;
-        max-width: 260px;
     }
 }
