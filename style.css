@@ -56,7 +56,6 @@ section {
 .main {
     width: 100%;
     min-height: 100vh;
-    padding-top: 150px; /* matches header height */
     align-items: center;
     background: url(/images/background_main.jpeg) no-repeat;
     background-size: cover;
