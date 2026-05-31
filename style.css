@@ -50,17 +50,20 @@ header {
    ========================================================================== */
 
 section {
-    padding: 100px 200px;
+    padding: 80px 200px;
 }
 
 .main {
     width: 100%;
     min-height: 100vh;
+    display: flex;
     align-items: center;
     background: url(/images/background_main.jpeg) no-repeat;
     background-size: cover;
-    background-position: center;
-    background-attachment: scroll;  /* ← done */
+    background-position: center 20%;
+    background-attachment: scroll;
+    padding-top: 70px;
+    padding-bottom: 0;
 }
 
 .main h2 {
