@@ -533,12 +533,27 @@ section {
         font-size: 14px;
     }
 
-    .main {
-        background: url(/images/background_main_mobile.png) no-repeat;
-        background-size: cover;
-        background-position: center top;
-        background-attachment: scroll; /* ← FIXED */
-    }
+.main {
+    background: url(/images/background_main_mobile.png) no-repeat;
+    background-size: cover;
+    background-position: center -50px; 
+    background-attachment: scroll;
+    align-items: flex-start; 
+    padding-top: 100px; 
+    min-height: 90vh; 
+}
+
+.main-buttons {
+    margin-top: 1em; 
+}
+
+.main-btn {
+    margin-bottom: 20px; 
+    padding: 0.7em 1.5em; 
+}
+
+.social-icons {
+    margin-top: 10px; 
 }
 
 @media (max-width: 768px) {
