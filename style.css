@@ -536,11 +536,11 @@ section {
 .main {
     background: url(/images/background_main_mobile.png) no-repeat;
     background-size: cover;
-    background-position: center -50px; 
+    background-position: center bottom; 
     background-attachment: scroll;
     align-items: flex-start; 
     padding-top: 100px; 
-    min-height: 90vh; 
+    min-height: 65vh; 
 }
 
 .main-buttons {
@@ -554,6 +554,10 @@ section {
 
 .social-icons {
     margin-top: 10px; 
+}
+
+#platforms {
+    padding-top: 20px; 
 }
 
 @media (max-width: 768px) {
