@@ -82,8 +82,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: left;
-    width: 48%;
-    margin-top: 1.5em;
+    width: 45%;
+    margin-top: 1.3em;
 }
 
 .main-btn {
