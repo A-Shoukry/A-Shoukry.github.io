@@ -536,11 +536,11 @@ section {
 .main {
     background: url(/images/background_main_mobile.png) no-repeat;
     background-size: cover;
-    background-position: center bottom; /* ده اللي هينزل الصورة تلزق تحت */
+    background-position: center bottom;
     background-attachment: scroll;
-    align-items: flex-start; 
-    padding-top: 100px; 
-    min-height: 60vh; /* ده اللي هيقصر الجزء الأزرق عشان ميسبش فراغ */
+    align-items: flex-start;
+    padding-top: 100px;
+    min-height: auto;
 }
 
 .main-buttons {
