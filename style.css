@@ -83,7 +83,7 @@ section {
 .main-buttons {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     width: 48%;
     margin-top: 1.7em;
 }
@@ -439,8 +439,8 @@ section {
    ========================================================================== */
 .contact {
     background-color: #4F709C;
-    padding-top: 15em;
-    padding-bottom: 15em;
+    padding-top: 8em;
+    padding-bottom: 8em;
 }
 
 .contact .icon {
@@ -473,107 +473,7 @@ section {
     padding: 0 12px 0 0;
 }
 
-/* ==========================================================================
-   MEDIA QUERIES (CLEANED REFACTOR)
-   ========================================================================== */
-@media (max-width: 1023px) {
-    header {
-        padding: 15px 30px;
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        font-size: 1.6em; 
-    }
-    
-    /* Fixed structural visibility, readability & sizes */
-    .navigation {
-        flex-direction: row; 
-        align-items: center;
-        gap: 20px; 
-    }
-    
-    .navigation a {
-        font-size: 1.1em; /* Significantly bigger & sharper scale for tap targets */
-        font-weight: 700;
-    }
-
-    .title {
-        font-size: 1.8em;
-    }
-    
-    section {
-        padding: 80px 20px;
-    }
-    
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .skill-grid {
-        grid-template-columns: 1fr; 
-        gap: 20px;
-    }
-    
-    .skill-text {
-        padding-left: 0; 
-        margin-top: 8px;
-    }
-    
-    .tool-card {
-        width: 100%; 
-    }
-}
-
-@media (max-width: 800px) {
-    body {
-        font-size: 14px;
-    }
-
-.main {
-    background: url(/images/background_main_mobile.png) no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    background-attachment: scroll;
-    align-items: flex-start;
-    padding-top: 100px;
-    min-height: auto;
-}
-
-.main-buttons {
-    margin-top: 1em; 
-}
-
-.main-btn {
-    margin-bottom: 20px; 
-    padding: 0.7em 1.5em; 
-}
-
-.social-icons {
-    margin-top: 10px; 
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 12px 15px; /* Slightly tighter header spacing */
-    }
-    .logo {
-        font-size: 1.25em; /* Made the logo smaller */
-    }
-    .navigation {
-        gap: 12px; /* Tighter spacing between menu items */
-    }
-    .navigation a {
-        font-size: 0.95em; /* Dropped below 1em for a cleaner, compact look */
-        font-weight: 600;  /* Keeps it clean and readable at a smaller size */
-    }
-    .main-heading {
-        font-size: 1.6rem;
-    }
-    /* ===== FLOATING BUTTON ===== */
+/* ===== FLOATING BUTTON ===== */
 .float-btn {
     position: fixed;
     bottom: 30px;
@@ -596,19 +496,16 @@ section {
     transform: scale(1.05);
 }
 
-@media (max-width: 800px) {
-    .float-btn {
-        bottom: 20px;
-        right: 20px;
-        font-size: 0.85em;
-        padding: 12px 18px;
-    }
+/* ===== INTAKE FORM ===== */
+.intake { 
+    background-color: #4F709C; 
+    padding-top: 6em; 
+    padding-bottom: 6em; 
 }
 
-/* ===== INTAKE FORM ===== */
-.intake { background-color: #4F709C; padding-top: 15em; padding-bottom: 15em; }
-
-.intake .title { color: #ffffff; }
+.intake .title { 
+    color: #ffffff; 
+}
 
 .intake-form-wrap {
     max-width: 620px;
@@ -619,7 +516,9 @@ section {
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
-.intake-field { margin-bottom: 1.3rem; }
+.intake-field { 
+    margin-bottom: 1.3rem; 
+}
 
 .intake-field > label {
     display: block;
@@ -705,15 +604,16 @@ section {
     accent-color: #213555;
 }
 
-.check-item:has(input:checked) {
-    background: #213555;
-    border-color: #213555;
-    color: #D8C4B6;
+/* Fixed :has styling syntax fallback */
+.check-item input[type="checkbox"]:checked + i,
+.check-item input[type="checkbox"]:checked {
+    accent-color: #213555;
 }
 
-.check-item:has(input:checked) i { color: #D8C4B6; }
-
-.intake-field textarea { resize: vertical; min-height: 85px; }
+.intake-field textarea { 
+    resize: vertical; 
+    min-height: 85px; 
+}
 
 .intake-btn {
     width: 100%;
@@ -742,8 +642,117 @@ section {
     min-height: 22px;
 }
 
-@media (max-width: 800px) {
-    .intake-form-wrap { padding: 24px 18px; }
-    .budget-row { grid-template-columns: 1fr; }
+/* ==========================================================================
+   MEDIA QUERIES (REFACTORED & SEPARATED PROPERLY)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 1.6em; 
+    }
+    
+    .navigation {
+        flex-direction: row; 
+        align-items: center;
+        gap: 20px; 
+    }
+    
+    .navigation a {
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+    
+    section {
+        padding: 60px 20px;
+    }
+    
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    .skill-text {
+        padding-left: 0; 
+        margin-top: 8px;
+    }
+    
+    .tool-card {
+        width: 100%; 
+    }
 }
+
+@media (max-width: 800px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main {
+        background: url(/images/background_main_mobile.png) no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        background-attachment: scroll;
+        align-items: flex-start;
+        padding-top: 100px;
+        min-height: auto;
+    }
+
+    .main-buttons {
+        margin-top: 1em; 
+        width: 100%;
+    }
+
+    .main-btn {
+        margin-bottom: 20px; 
+        padding: 0.7em 1.5em; 
+    }
+
+    .social-icons {
+        margin-top: 10px; 
+    }
+
+    .float-btn {
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.85em;
+        padding: 12px 18px;
+    }
+
+    .intake-form-wrap { 
+        padding: 24px 18px; 
+    }
+    
+    .budget-row { 
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 15px;
+    }
+    .logo {
+        font-size: 1.25em;
+    }
+    .navigation {
+        gap: 12px;
+    }
+    .navigation a {
+        font-size: 0.95em;
+        font-weight: 600; 
+    }
 }
