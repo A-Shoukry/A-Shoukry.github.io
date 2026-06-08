@@ -278,7 +278,172 @@
             </div>            
         </div>
     </section>
-    
+    <section class="intake" id="intake">
+    <h2 class="title">Start a Project</h2>
+    <div class="intake-form-wrap">
+
+        <div class="intake-field">
+            <label for="clientName">Full Name</label>
+            <input type="text" id="clientName" placeholder="Ahmed Mohamed">
+        </div>
+
+        <div class="intake-field">
+            <label for="clientPhone">Phone Number</label>
+            <input type="tel" id="clientPhone" placeholder="+20 1XX XXX XXXX">
+        </div>
+
+        <div class="intake-field">
+            <label>Monthly Ad Budget</label>
+            <div class="budget-row">
+                <select id="clientCurrency">
+                    <option value="USD">🇺🇸 USD</option>
+                    <option value="EGP">🇪🇬 EGP</option>
+                    <option value="SAR">🇸🇦 SAR</option>
+                    <option value="AED">🇦🇪 AED</option>
+                    <option value="EUR">🇪🇺 EUR</option>
+                    <option value="GBP">🇬🇧 GBP</option>
+                </select>
+                <input type="number" id="clientBudget" placeholder="e.g. 5000" min="0">
+            </div>
+        </div>
+
+        <div class="intake-field">
+            <label for="clientCategory">Business Category</label>
+            <select id="clientCategory" onchange="toggleOtherCategory(this)">
+                <option value="" disabled selected>Select your industry</option>
+                <option>E-commerce / Retail</option>
+                <option>Real Estate</option>
+                <option>Education / E-learning</option>
+                <option>Healthcare / Medical</option>
+                <option>Food & Beverage</option>
+                <option>Automotive</option>
+                <option>Travel & Tourism</option>
+                <option>Finance / Insurance</option>
+                <option>Fashion & Beauty</option>
+                <option>Technology / SaaS</option>
+                <option>Construction & Building Materials</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="intake-field" id="otherCategoryField" style="display:none;">
+            <label for="otherCategoryInput">Specify your industry</label>
+            <input type="text" id="otherCategoryInput" placeholder="e.g. Logistics, Sports, NGO...">
+        </div>
+
+        <div class="intake-field">
+            <label>Platforms <span class="intake-hint">(select all that apply)</span></label>
+            <div class="platform-checks">
+                <label class="check-item"><input type="checkbox" value="Facebook"> <i class="fab fa-facebook"></i> Facebook</label>
+                <label class="check-item"><input type="checkbox" value="Instagram"> <i class="fab fa-instagram"></i> Instagram</label>
+                <label class="check-item"><input type="checkbox" value="TikTok"> <i class="fab fa-tiktok"></i> TikTok</label>
+                <label class="check-item"><input type="checkbox" value="Snapchat"> <i class="fab fa-snapchat"></i> Snapchat</label>
+                <label class="check-item"><input type="checkbox" value="X (Twitter)"> <i class="fab fa-twitter"></i> X (Twitter)</label>
+                <label class="check-item"><input type="checkbox" value="LinkedIn"> <i class="fab fa-linkedin"></i> LinkedIn</label>
+                <label class="check-item"><input type="checkbox" value="Google Ads"> <i class="fab fa-google"></i> Google Ads</label>
+                <label class="check-item"><input type="checkbox" value="All" onchange="toggleAllPlatforms(this)"> ✅ All Platforms</label>
+                <label class="check-item"><input type="checkbox" value="Other" onchange="toggleOtherPlatform(this)"> ✏️ Other</label>
+            </div>
+        </div>
+
+        <div class="intake-field" id="otherPlatformField" style="display:none;">
+            <label for="otherPlatformInput">Specify platform</label>
+            <input type="text" id="otherPlatformInput" placeholder="e.g. Pinterest, Programmatic...">
+        </div>
+
+        <div class="intake-field">
+            <label for="clientNote">Brief About Your Goal <span class="intake-hint">(optional)</span></label>
+            <textarea id="clientNote" rows="3" maxlength="300" placeholder="e.g. Launch campaign for a new product in Q3..."></textarea>
+        </div>
+
+        <button class="intake-btn" onclick="submitIntake()">Send Inquiry</button>
+        <p class="intake-status" id="intakeStatus"></p>
+    </div>
+</section>
+    <script>
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyV7R12Hxp9UqmZNuuJcHHAa92XpKUcaeKi4GLhWOpnfSTFLQCsETppSYwb_iweVtU/exec';
+
+function toggleOtherCategory(sel) {
+    document.getElementById('otherCategoryField').style.display =
+        sel.value === 'Other' ? 'block' : 'none';
+}
+
+function toggleOtherPlatform(cb) {
+    document.getElementById('otherPlatformField').style.display =
+        cb.checked ? 'block' : 'none';
+}
+
+function toggleAllPlatforms(cb) {
+    const boxes = document.querySelectorAll('.platform-checks input[type="checkbox"]');
+    boxes.forEach(b => { if (b.value !== 'All') b.checked = cb.checked; });
+}
+
+function submitIntake() {
+    const name     = document.getElementById('clientName').value.trim();
+    const phone    = document.getElementById('clientPhone').value.trim();
+    const currency = document.getElementById('clientCurrency').value;
+    const budget   = document.getElementById('clientBudget').value.trim();
+    const category = document.getElementById('clientCategory').value;
+    const status   = document.getElementById('intakeStatus');
+
+    const checked = [...document.querySelectorAll('.platform-checks input:checked')]
+        .filter(b => b.value !== 'All' && b.value !== 'Other')
+        .map(b => b.value);
+
+    if (!name || !phone || !budget || !category) {
+        status.style.color = '#e74c3c';
+        status.textContent = '⚠️ Please fill in name, phone, budget, and category.';
+        return;
+    }
+    if (checked.length === 0) {
+        status.style.color = '#e74c3c';
+        status.textContent = '⚠️ Please select at least one platform.';
+        return;
+    }
+
+    const btn = document.querySelector('.intake-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    status.textContent = '';
+
+    const payload = {
+        name, phone, currency, budget, category,
+        otherCategory: document.getElementById('otherCategoryInput').value.trim(),
+        platforms: checked.join(', '),
+        otherPlatform: document.getElementById('otherPlatformInput').value.trim(),
+        note: document.getElementById('clientNote').value.trim()
+    };
+
+    fetch(SHEET_URL, { method: 'POST', body: JSON.stringify(payload) })
+    .then(() => {
+        btn.textContent = '✓ Sent!';
+        btn.style.background = '#2d6a4f';
+        status.style.color = '#2d6a4f';
+        status.textContent = "Got it! I'll reply within 24 hours.";
+        document.getElementById('clientName').value = '';
+        document.getElementById('clientPhone').value = '';
+        document.getElementById('clientBudget').value = '';
+        document.getElementById('clientCategory').value = '';
+        document.getElementById('clientNote').value = '';
+        document.getElementById('otherCategoryField').style.display = 'none';
+        document.getElementById('otherPlatformField').style.display = 'none';
+        document.querySelectorAll('.platform-checks input').forEach(b => b.checked = false);
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = 'Send Inquiry';
+            btn.style.background = '#213555';
+            status.textContent = '';
+        }, 4000);
+    })
+    .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Send Inquiry';
+        status.style.color = '#e74c3c';
+        status.textContent = '⚠️ Something went wrong. Try WhatsApp instead.';
+    });
+}
+</script>
+    <a href="#intake" class="float-btn">🚀 Start a Project</a>
     <footer class="footer">
         <p class="footer-title">Copyrights @ <span>Shoukry</span></p>
         <div class="social-icons">
