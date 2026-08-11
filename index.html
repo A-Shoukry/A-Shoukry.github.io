@@ -358,7 +358,7 @@
         </div>
     </section>
 
-    <script>
+<script>
     const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyV7R12Hxp9UqmZNuuJcHHAa92XpKUcaeKi4GLhWOpnfSTFLQCsETppSYwb_iweVtU/exec';
 
     function toggleOtherCategory(sel) {
@@ -412,7 +412,15 @@
             note: document.getElementById('clientNote').value.trim()
         };
 
-        fetch(SHEET_URL, { method: 'POST', body: JSON.stringify(payload) })
+        // FIXED: Added mode: 'no-cors' here
+        fetch(SHEET_URL, { 
+            method: 'POST', 
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload) 
+        })
         .then(() => {
             btn.textContent = '✓ Sent!';
             btn.style.background = '#2d6a4f';
@@ -440,11 +448,13 @@
             status.textContent = '⚠️ Something went wrong. Try WhatsApp instead.';
         });
     }
-                <a href="#clients">Clients</a>
+    </script> <!-- FIXED: The script tag is now properly closed -->
 
-                <a href="#clients" class="main-btn">Clients</a>
+    <!-- Moved your stray Client links outside the script tag -->
+    <a href="#clients">Clients</a>
+    <a href="#clients" class="main-btn">Clients</a>
 
-  </section>
+</section>
 
      <section class="projects" id="clients">
         <h2 class="title">Clients</h2>
