@@ -59,8 +59,8 @@ section {
     display: flex;
     align-items: center;
     background: linear-gradient(to right, rgba(33,53,85,0.88) 0%, rgba(33,53,85,0.55) 40%, rgba(33,53,85,0) 70%), url(/images/new_background_main.png) no-repeat #D8C4B6;
-    background-size: auto 200%;
-    background-position: right top;
+    background-size: auto 220%;
+    background-position: right -20px;
     background-attachment: scroll;
     padding-top: 70px;
     padding-bottom: 0;
@@ -731,8 +731,8 @@ section {
 
     .main {
         background: linear-gradient(to bottom, rgba(33,53,85,0.85) 0%, rgba(33,53,85,0.4) 45%, rgba(33,53,85,0) 75%), url(/images/new_background_main.png) no-repeat #D8C4B6;
-        background-size: auto 200%;
-        background-position: center top;
+        background-size: auto 220%;
+        background-position: center -20px;
         background-attachment: scroll;
         align-items: flex-start;
         padding-top: 100px;
