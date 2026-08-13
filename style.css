@@ -58,9 +58,9 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(/images/new_background_main.png) no-repeat;
+    background: linear-gradient(rgba(33,53,85,0.45), rgba(33,53,85,0.45)), url(/images/new_background_main.png) no-repeat;
     background-size: cover;
-    background-position: center 20%;
+    background-position: center top;
     background-attachment: scroll;
     padding-top: 70px;
     padding-bottom: 0;
@@ -455,6 +455,7 @@ section {
     background-color: #00001e;
     color: #fff;
     padding: 2em;
+    padding-bottom: 6em;
     display: flex;
     justify-content: space-between;
 }
@@ -492,6 +493,33 @@ section {
 }
 
 .float-btn:hover {
+    background: #1a2b44;
+    transform: scale(1.05);
+}
+
+/* ===== One-time centered CTA ===== */
+.cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.cta-center a {
+    background: #213555;
+    color: #D8C4B6;
+    padding: 16px 44px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-center a:hover {
     background: #1a2b44;
     transform: scale(1.05);
 }
@@ -702,13 +730,13 @@ section {
     }
 
     .main {
-        background: url(/images/new_background_main.png) no-repeat;
+        background: linear-gradient(rgba(33,53,85,0.45), rgba(33,53,85,0.45)), url(/images/new_background_main.png) no-repeat #D8C4B6;
         background-size: cover;
-        background-position: center bottom;
+        background-position: center top;
         background-attachment: scroll;
         align-items: flex-start;
         padding-top: 100px;
-        min-height: auto;
+        min-height: 100vh;
     }
 
     .main-buttons {
@@ -739,6 +767,10 @@ section {
     .budget-row { 
         grid-template-columns: 1fr; 
     }
+
+    .cta-center {
+        padding: 40px 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -755,30 +787,4 @@ section {
         font-size: 0.95em;
         font-weight: 600; 
     }
-    /* ===== One-time centered CTA ===== */
-.cta-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-    background-color: #fff;
-}
-
-.cta-center a {
-    background: #213555;
-    color: #D8C4B6;
-    padding: 16px 44px;
-    border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.05em;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    transition: background 0.3s, transform 0.2s;
-}
-
-.cta-center a:hover {
-    background: #1a2b44;
-    transform: scale(1.05);
-}
 }
