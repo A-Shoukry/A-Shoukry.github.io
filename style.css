@@ -58,7 +58,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(/images/background_main.jpeg) no-repeat;
+    background: url(/images/new_background_main.png) no-repeat;
     background-size: cover;
     background-position: center 20%;
     background-attachment: scroll;
@@ -702,7 +702,7 @@ section {
     }
 
     .main {
-        background: url(/images/background_main_mobile.png) no-repeat;
+        background: url(/images/new_background_main.png) no-repeat;
         background-size: cover;
         background-position: center bottom;
         background-attachment: scroll;
