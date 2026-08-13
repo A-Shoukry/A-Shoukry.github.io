@@ -755,4 +755,30 @@ section {
         font-size: 0.95em;
         font-weight: 600; 
     }
+    /* ===== One-time centered CTA ===== */
+.cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.cta-center a {
+    background: #213555;
+    color: #D8C4B6;
+    padding: 16px 44px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-center a:hover {
+    background: #1a2b44;
+    transform: scale(1.05);
+}
 }
