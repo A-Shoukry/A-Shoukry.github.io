@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ahmed Shoukry - Media Buying Manager with 8+ years of experience managing $65M+ in digital ad campaigns.">
+    <meta name="description" content="Ahmed Shoukry - Media Buying Manager & Growth Consultant with 8+ years of experience managing $65M+ in digital ad campaigns across MENA & GCC.">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/images/favicon.ico">
-    <title>Ahmed Shoukry | Media Buying Manager</title>
+    <title>Ahmed Shoukry | Media Buying Manager & Growth Consultant</title>
 </head>
 <body>
 
 <header>
     <a href="#main" class="logo">Ahmed</a>
     <nav class="navigation">
+        <a href="#projects">Projects</a>
         <a href="#intake">Start a Project</a>
         <a href="#contact">Contact</a>
     </nav>
@@ -24,9 +25,9 @@
     <section class="main" id="main">
         <div>
             <h2>Hello, I'm Ahmed</h2>
-            <h2>Media Buying Manager</h2>
+            <h2>Media Buying Manager & Consultant</h2>
             <h2>8+ Years Experience</h2>
-            <h2>Managed $65M+</h2>
+            <h2>Managed $65M+ Ad Spend</h2>
             <div class="main-buttons">
                 <a href="#contact" class="main-btn">Let’s Work Together</a>
             </div>
@@ -35,6 +36,47 @@
                 <a href="mailto:Ahmedsayedshoukry@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/ahmed-shoukryy/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
+        </div>
+    </section>
+
+    <!-- NEW: Featured Case Studies & Consulting Work -->
+    <section class="platforms" id="projects">
+        <h2 class="title">Featured Projects & Case Studies</h2>
+        <div class="platform-container">
+
+            <div class="platform-card fx-meta">
+                <div class="platform-header">
+                    <div class="platform-logo"><i class="fas fa-chart-line"></i></div>
+                    <span class="platform-tag">E-commerce Scaling (EGP Market)</span>
+                </div>
+                <div class="platform-body">
+                    <h3 class="platform-name">Local Fashion & Retail Brand</h3>
+                    <p class="platform-desc">Managed full-funnel Meta & TikTok campaigns, optimizing CPL/CPA to scale monthly volume by 180% while sustaining a 3.2x ROAS.</p>
+                </div>
+            </div>
+
+            <div class="platform-card fx-cm360">
+                <div class="platform-header">
+                    <div class="platform-logo"><i class="fas fa-briefcase"></i></div>
+                    <span class="platform-tag">Growth Consulting & Audit</span>
+                </div>
+                <div class="platform-body">
+                    <h3 class="platform-name">Real Estate & Edu-Tech Lead Gen Audit</h3>
+                    <p class="platform-desc">Re-structured tracking frameworks, mapped CRM offline conversion stages via Meta CAPI/GA4, and compressed CPQL by 35%.</p>
+                </div>
+            </div>
+
+            <div class="platform-card fx-dv360">
+                <div class="platform-header">
+                    <div class="platform-logo"><i class="fas fa-globe-africa"></i></div>
+                    <span class="platform-tag">GCC Market Expansion</span>
+                </div>
+                <div class="platform-body">
+                    <h3 class="platform-name">Regional Consumer Services (UAE & KSA)</h3>
+                    <p class="platform-desc">Designed cross-platform media allocation across Snapchat, Google Ads, and TikTok to scale customer acquisition across Saudi Arabia & UAE.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -305,9 +347,12 @@
             </div>
 
             <div class="intake-field">
-                <label for="clientCategory">Business Category</label>
+                <label for="clientCategory">Service / Engagement Required</label>
                 <select id="clientCategory" onchange="toggleOtherCategory(this)" required>
-                    <option value="" disabled selected>Select your industry</option>
+                    <option value="" disabled selected>Select service or industry</option>
+                    <option value="Full Media Buying & Campaign Execution">Full Media Buying & Campaign Execution</option>
+                    <option value="1-on-1 Strategy & Growth Audit Consultation">1-on-1 Strategy & Growth Audit Consultation</option>
+                    <option value="Conversion Tracking & CRM CAPI Integration">Conversion Tracking & CRM CAPI Integration</option>
                     <option value="E-commerce / Retail">E-commerce / Retail</option>
                     <option value="Real Estate">Real Estate</option>
                     <option value="Education / E-learning">Education / E-learning</option>
@@ -324,8 +369,8 @@
             </div>
 
             <div class="intake-field" id="otherCategoryField" style="display:none;">
-                <label for="otherCategoryInput">Specify your industry</label>
-                <input type="text" id="otherCategoryInput" placeholder="e.g. Logistics, Sports, NGO...">
+                <label for="otherCategoryInput">Specify your requirement</label>
+                <input type="text" id="otherCategoryInput" placeholder="e.g. Audit existing ad accounts, Audit Zoho CRM tracking...">
             </div>
 
             <div class="intake-field">
@@ -345,12 +390,12 @@
 
             <div class="intake-field" id="otherPlatformField" style="display:none;">
                 <label for="otherPlatformInput">Specify platform</label>
-                <input type="text" id="otherPlatformInput" placeholder="e.g. Pinterest, Programmatic...">
+                <input type="text" id="otherPlatformInput" placeholder="e.g. Pinterest, Programmatic, DV360...">
             </div>
 
             <div class="intake-field">
                 <label for="clientNote">Brief About Your Goal <span class="intake-hint">(optional)</span></label>
-                <textarea id="clientNote" rows="3" maxlength="300" placeholder="e.g. Launch campaign for a new product in Q3..."></textarea>
+                <textarea id="clientNote" rows="3" maxlength="300" placeholder="e.g. Looking for a 1-on-1 campaign audit or scaling local sales in Q3..."></textarea>
             </div>
 
             <button type="submit" class="intake-btn">Send Inquiry</button>
