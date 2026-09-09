@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmed Shoukry - Media Buying Manager with 8+ years of experience managing $65M+ in digital ad campaigns.">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/images/favicon.ico">
-    <title>Ahmed Shoukry</title>
+    <title>Ahmed Shoukry | Media Buying Manager</title>
 </head>
 <body>
+
 <header>
     <a href="#main" class="logo">Ahmed</a>
-
     <nav class="navigation">
         <a href="#intake">Start a Project</a>
         <a href="#contact">Contact</a>
@@ -262,7 +263,7 @@
                 <div class="icon"><i class="fas fa-phone"></i></div>
                 <div class="info">
                     <h3>Phone</h3>
-                    <a href="tel:00201111058060" style="color: inherit; text-decoration: none;">+2 011 1105 8060</a>
+                    <a href="tel:+201111058060" style="color: inherit; text-decoration: none;">+2 011 1105 8060</a>
                 </div>
             </div>
             <div class="card">
@@ -277,33 +278,35 @@
 
     <section class="intake" id="intake">
         <h2 class="title">Start a Project</h2>
-        <div class="intake-form-wrap">
+        <form class="intake-form-wrap" onsubmit="event.preventDefault(); submitIntake();">
 
             <div class="intake-field">
                 <label for="clientName">Full Name</label>
-                <input type="text" id="clientName" placeholder="Ahmed Shoukry">
+                <input type="text" id="clientName" placeholder="Ahmed Shoukry" required>
             </div>
 
             <div class="intake-field">
                 <label for="clientPhone">Phone Number</label>
-                <input type="tel" id="clientPhone" placeholder="+20 1XX XXX XXXX">
+                <input type="tel" id="clientPhone" placeholder="+20 1XX XXX XXXX" required>
             </div>
 
             <div class="intake-field">
                 <label>Monthly Ad Budget</label>
                 <div class="budget-row">
                     <select id="clientCurrency">
-                        <option value="USD"> USD</option>
-                        <option value="EGP"> EGP</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EGP">EGP (E£)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="AED">AED (AED)</option>
+                        <option value="SAR">SAR (SAR)</option>
                     </select>
-                    <input type="number" id="clientBudget" placeholder="e.g. 20,000" min="0">
+                    <input type="number" id="clientBudget" placeholder="e.g. 20,000" min="0" required>
                 </div>
             </div>
 
             <div class="intake-field">
                 <label for="clientCategory">Business Category</label>
-                <!-- FIXED value to avoid breaking validation -->
-                <select id="clientCategory" onchange="toggleOtherCategory(this)">
+                <select id="clientCategory" onchange="toggleOtherCategory(this)" required>
                     <option value="" disabled selected>Select your industry</option>
                     <option value="E-commerce / Retail">E-commerce / Retail</option>
                     <option value="Real Estate">Real Estate</option>
@@ -336,7 +339,7 @@
                     <label class="check-item"><input type="checkbox" value="LinkedIn"> <i class="fab fa-linkedin"></i> LinkedIn</label>
                     <label class="check-item"><input type="checkbox" value="Google Ads"> <i class="fab fa-google"></i> Google Ads</label>
                     <label class="check-item"><input type="checkbox" value="All" onchange="toggleAllPlatforms(this)"> All Platforms</label>
-                    <label class="check-item"><input type="checkbox" value="Other" onchange="toggleOtherPlatform(this)"> Other Platforms </label>
+                    <label class="check-item"><input type="checkbox" value="Other" onchange="toggleOtherPlatform(this)"> Other Platforms</label>
                 </div>
             </div>
 
@@ -350,10 +353,21 @@
                 <textarea id="clientNote" rows="3" maxlength="300" placeholder="e.g. Launch campaign for a new product in Q3..."></textarea>
             </div>
 
-            <button class="intake-btn" onclick="submitIntake()">Send Inquiry</button>
+            <button type="submit" class="intake-btn">Send Inquiry</button>
             <p class="intake-status" id="intakeStatus"></p>
-        </div>
+        </form>
     </section>
+
+    <a href="#intake" class="float-btn">Start a Project</a>
+    
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Shoukry</span></p>
+        <div class="social-icons">
+            <a href="https://wa.me/201111058060" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:Ahmedsayedshoukry@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/ahmed-shoukryy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
 
 <script>
     const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyV7R12Hxp9UqmZNuuJcHHAa92XpKUcaeKi4GLhWOpnfSTFLQCsETppSYwb_iweVtU/exec';
@@ -409,7 +423,6 @@
             note: document.getElementById('clientNote').value.trim()
         };
 
-        // FIXED: Added mode: 'no-cors' here
         fetch(SHEET_URL, { 
             method: 'POST', 
             mode: 'no-cors',
@@ -446,17 +459,5 @@
         });
     }
 </script>
-</section>
-
-    <a href="#intake" class="float-btn">Start a Project</a>
-    
-    <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Shoukry</span></p>
-        <div class="social-icons">
-            <a href="https://wa.me/201111058060" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:Ahmedsayedshoukry@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/ahmed-shoukryy/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </footer>
 </body>
 </html>
