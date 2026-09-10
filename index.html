@@ -22,6 +22,26 @@
         .case-platforms{display:flex;flex-wrap:wrap;gap:6px;}
         .case-platforms span{font-size:0.7em;background:#eef3f9;color:#213555;padding:3px 10px;border-radius:20px;font-weight:600;}
         @media (max-width:600px){.case-metrics{gap:6px;}.case-metrics .metric-value{font-size:1.05em;}.case-metrics .metric-label{font-size:0.62em;}}
+
+        /* ===== Accordion behavior ===== */
+        .platform-card{cursor:pointer;}
+        .case-toggle{
+            display:flex; align-items:center; justify-content:center;
+            width:26px; height:26px; border-radius:50%;
+            background:#eef3f9; color:#213555; font-weight:700; font-size:16px;
+            transition:transform .25s ease, background .2s ease;
+            flex-shrink:0;
+        }
+        .platform-card.open .case-toggle{ transform:rotate(45deg); background:#213555; color:#fff; }
+        .case-body{
+            max-height:0; overflow:hidden;
+            transition:max-height .3s ease, opacity .25s ease, margin-top .25s ease;
+            opacity:0;
+        }
+        .platform-card.open .case-body{
+            max-height:400px; opacity:1; margin-top:6px;
+        }
+        .platform-header{ justify-content:space-between; }
     </style>
 </head>
 <body>
@@ -61,16 +81,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-shopping-bag"></i></div>
                     <span class="platform-tag">E-commerce · Scaling</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">E-commerce Growth & Scaling</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">7–10X</span><span class="metric-label">ROAS</span></div>
                         <div class="metric"><span class="metric-value">$5</span><span class="metric-label">Cost / Purchase</span></div>
                         <div class="metric"><span class="metric-value">20M+</span><span class="metric-label">SAR Revenue</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Full-funnel Meta + TikTok, creative testing & budget scaling toward purchases.</p>
-                    <div class="case-platforms"><span>Meta Ads</span><span>TikTok Ads</span><span>GA4</span></div>
+                    <div class="case-platforms"><span>Meta Ads</span><span>TikTok Ads</span><span>GA4</span></div></div>
                 </div>
             </div>
 
@@ -78,16 +99,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-building"></i></div>
                     <span class="platform-tag">Real Estate · Lead Gen</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">Real Estate Qualified Lead Gen</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">-35%</span><span class="metric-label">Cost / QL</span></div>
                         <div class="metric"><span class="metric-value">$20→$9</span><span class="metric-label">CPA</span></div>
                         <div class="metric"><span class="metric-value">↑</span><span class="metric-label">Lead Quality</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Audience segmentation + CRM offline-conversion feedback to chase qualified leads, not volume.</p>
-                    <div class="case-platforms"><span>Meta Ads</span><span>Google Ads</span><span>CRM / CAPI</span></div>
+                    <div class="case-platforms"><span>Meta Ads</span><span>Google Ads</span><span>CRM / CAPI</span></div></div>
                 </div>
             </div>
 
@@ -95,16 +117,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-graduation-cap"></i></div>
                     <span class="platform-tag">Education · Enrollment</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">Education & Enrollment Acquisition</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">-35%</span><span class="metric-label">CPL YoY</span></div>
                         <div class="metric"><span class="metric-value">20+</span><span class="metric-label">School Brands</span></div>
                         <div class="metric"><span class="metric-value">-28%</span><span class="metric-label">CPC</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Full-funnel — programmatic/YouTube awareness → Meta retargeting → Google conversion.</p>
-                    <div class="case-platforms"><span>Meta Ads</span><span>Google Ads</span><span>DV360</span></div>
+                    <div class="case-platforms"><span>Meta Ads</span><span>Google Ads</span><span>DV360</span></div></div>
                 </div>
             </div>
 
@@ -112,16 +135,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-store"></i></div>
                     <span class="platform-tag">Local Brand · Retail</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">Local Brand Growth & Store Build</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">1.2→7.5%</span><span class="metric-label">Conv. Rate</span></div>
                         <div class="metric"><span class="metric-value">10+</span><span class="metric-label">Shopify Builds</span></div>
                         <div class="metric"><span class="metric-value">↓ CPA</span><span class="metric-label">Efficient Sales</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Rebuilt the store + local targeting & retargeting so traffic actually converts.</p>
-                    <div class="case-platforms"><span>Meta Ads</span><span>Shopify</span><span>Retargeting</span></div>
+                    <div class="case-platforms"><span>Meta Ads</span><span>Shopify</span><span>Retargeting</span></div></div>
                 </div>
             </div>
 
@@ -129,16 +153,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-bullseye"></i></div>
                     <span class="platform-tag">Lead Gen · B2B</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">Volume → Qualified Acquisition</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">100+</span><span class="metric-label">Qualified B2B Leads</span></div>
                         <div class="metric"><span class="metric-value">~$0.15</span><span class="metric-label">Cost / Lead</span></div>
                         <div class="metric"><span class="metric-value">2 mo</span><span class="metric-label">Timeframe</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Reworked targeting & creative around lead quality and conversion feedback.</p>
-                    <div class="case-platforms"><span>Meta Ads</span><span>Google Ads</span><span>Lead Forms</span></div>
+                    <div class="case-platforms"><span>Meta Ads</span><span>Google Ads</span><span>Lead Forms</span></div></div>
                 </div>
             </div>
 
@@ -146,16 +171,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-chart-line"></i></div>
                     <span class="platform-tag">Analytics · Tracking</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">Conversion Tracking & Attribution</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">-35%</span><span class="metric-label">CPQL</span></div>
                         <div class="metric"><span class="metric-value">100%</span><span class="metric-label">Sales Tracked</span></div>
                         <div class="metric"><span class="metric-value">CAPI</span><span class="metric-label">Server-side</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Server-side GTM + Meta CAPI + CRM offline import for accurate, revenue-based optimization.</p>
-                    <div class="case-platforms"><span>GA4</span><span>GTM</span><span>Looker Studio</span></div>
+                    <div class="case-platforms"><span>GA4</span><span>GTM</span><span>Looker Studio</span></div></div>
                 </div>
             </div>
 
@@ -163,16 +189,17 @@
                 <div class="platform-header">
                     <div class="platform-logo"><i class="fas fa-globe-africa"></i></div>
                     <span class="platform-tag">GCC Market Expansion</span>
+                    <span class="case-toggle">+</span>
                 </div>
                 <div class="platform-body">
                     <h3 class="platform-name">Regional Scaling — UAE & KSA</h3>
-                    <div class="case-metrics">
+                    <div class="case-body"><div class="case-metrics">
                         <div class="metric"><span class="metric-value">$35M+</span><span class="metric-label">Spend Managed</span></div>
                         <div class="metric"><span class="metric-value">4</span><span class="metric-label">Platforms</span></div>
                         <div class="metric"><span class="metric-value">GCC</span><span class="metric-label">Coverage</span></div>
                     </div>
                     <p class="opt-line"><strong>Optimization:</strong> Cross-platform media allocation across Snapchat, Google, TikTok & Meta.</p>
-                    <div class="case-platforms"><span>Snapchat</span><span>Google Ads</span><span>TikTok</span></div>
+                    <div class="case-platforms"><span>Snapchat</span><span>Google Ads</span><span>TikTok</span></div></div>
                 </div>
             </div>
 
@@ -602,6 +629,16 @@
             status.textContent = '⚠️ Something went wrong. Try WhatsApp instead.';
         });
     }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('#projects .platform-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      card.classList.toggle('open');
+    });
+  });
+});
 </script>
 </body>
 </html>
